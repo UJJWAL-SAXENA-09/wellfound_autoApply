@@ -33,27 +33,9 @@ npm install
 
 **2. Create your `.env`:**
 
-This checkout has no tracked `.gitignore`. Before creating your configuration, locate the local Git exclusion file:
+The included `.gitignore` excludes `.env`, browser sessions, application records, logs, screenshots, resumes, and dependencies. The generic `.env.example` template stays tracked.
 
-```bash
-git rev-parse --git-path info/exclude
-```
-
-Add these patterns to that file to keep credentials, browser sessions, and runtime output local:
-
-```gitignore
-.env
-.env.*
-!.env.example
-node_modules/
-applications*.csv
-apply-state-*.json
-*.log
-.*-chrome-profile/
-*.pdf
-```
-
-Then copy the configuration template:
+Copy the configuration template:
 
 ```powershell
 copy .env.example .env
@@ -64,7 +46,7 @@ On macOS or Linux, use `cp .env.example .env`.
 Open `.env` and fill in your details — name, contact, skills, highlights, salary
 expectations, links, etc. Every application answer and cover letter is built from
 these values; **nothing personal is hard-coded in the scripts**. Keep `.env` local
-with the exclusions above and review `git status --short` before committing.
+with these exclusions and review `git status --short` before committing. Ignore rules do not remove files that are already tracked.
 
 Optional: set `GEMINI_KEY` to a free Google Gemini API key — any application
 question the built-in answer bank can't match gets answered by Gemini using your CV.

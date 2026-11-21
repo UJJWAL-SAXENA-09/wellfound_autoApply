@@ -1,0 +1,21 @@
+# Local credentials and package configuration
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+
+# Dependencies and saved browser sessions
+node_modules/
+.*-chrome-profile/
+
+# Application records, logs, screenshots, and resumes
+applications*.csv
+apply-state-*.json
+*.log
+*.png
+*.pdf
+
+# macOS metadata
+.DS_Store
